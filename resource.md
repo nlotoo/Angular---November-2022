@@ -1,2 +1,2 @@
 ## [Intro to Angular and TypeScript]
- **https://www.typescriptlang.org/
+- https://www.typescriptlang.org/ - 
