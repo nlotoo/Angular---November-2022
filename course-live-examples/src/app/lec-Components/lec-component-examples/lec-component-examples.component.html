@@ -1,0 +1,22 @@
+<div>
+    <p>{{msg}}</p>
+    <h1>{{title}}</h1>
+    <input #titleInput type="text">
+    <button (click)="ChangeTitle(titleInput.value)">Change title</button>
+
+    <button (click)="handleClickEvent()">Toggle
+        <ng-container *ngIf="!showCase">Show</ng-container>
+        <ng-container *ngIf="showCase">Hide</ng-container>
+    </button>
+
+    <div>
+        <ul *ngFor="let user of userlist">
+            <app-lec-componets-list-user [StaticString]="Static" [userList]="user" [showCase]="showCase">
+            </app-lec-componets-list-user>
+        </ul>
+    </div>
+
+
+
+
+</div>
