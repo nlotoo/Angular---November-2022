@@ -1,5 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+
+
+export interface ICustomEvent {
+  test: number
+}
 @Component({
   selector: 'app-lec-componets-list-user',
   templateUrl: './lec-componets-list-user.component.html',
@@ -13,5 +18,18 @@ export class LecComponetsListUserComponent {
   @Input() showCase!: boolean;
 
   @Input() StaticString!: string
+
+
+  // output -> interface
+
+
+  @Output() customEvent = new EventEmitter<ICustomEvent>()
+
+
+  selectClickHandler() {
+    this.customEvent.emit({ test: 123 })
+  }
+
+
 
 }

@@ -10,8 +10,16 @@
     </button>
 
     <div>
+        Selected index
+
+    </div>
+
+    <div>
         <ul *ngFor="let user of userlist">
-            <app-lec-componets-list-user [StaticString]="Static" [userList]="user" [showCase]="showCase">
+            <!-- props  -->
+            <app-lec-componets-list-user (customEvent)="customEventHandler($event)" [StaticString]="Static" [userList]="user" [showCase]="showCase"
+            >
+            <!-- (click)="selectedIndex()"  -->
             </app-lec-componets-list-user>
         </ul>
     </div>

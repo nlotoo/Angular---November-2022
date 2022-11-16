@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ICustomEvent } from 'src/app/lec-componets-list-user/lec-componets-list-user.component';
+
 
 @Component({
   selector: 'app-lec-component-examples',
@@ -9,17 +11,17 @@ export class LecComponentExamplesComponent implements OnInit {
 
   constructor() { }
 
-// interpolation
+  // interpolation
   msg = "hello world"
 
-// #
+  // #
   title = 'promo'
   ChangeTitle(titleInput: string) {
     this.title = titleInput;
   }
 
 
-  
+
   showCase = false
 
   userlist = [{
@@ -40,6 +42,16 @@ export class LecComponentExamplesComponent implements OnInit {
     console.log('clicked')
   };
 
+  selectedIndex() {
+    console.log('clicked')
+
+  }
+
+
+  customEventHandler($event:ICustomEvent) {
+    console.log($event);
+    console.log('asd')
+  }
 
 
 
